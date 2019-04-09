@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Financial Saviour - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Budgeter - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Financial Savior</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2113-ay1819s2-t11-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Financial Saviour - Developer Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Financial Savior</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/cs2113-ay1819s2-t11-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Budgeter - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>T11-3</code>      Since: <code>Jan 2019</code>      Licence: <code>MIT</code></p>
@@ -30,9 +30,15 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
+<li><a href="#commands-ui-support">3.2. Commands UI Support</a></li>
+<li><a href="#filter-mechanism">3.3. Filter Mechanism</a></li>
+<li><a href="#display-entries-mechanism">3.4. Display Entries Mechanism</a></li>
+<li><a href="#data-encryption">3.5. Data Encryption</a></li>
+<li><a href="#lock-feature">3.6. Lock feature</a></li>
+<li><a href="#report-feature">3.7. Report feature</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
+<li><a href="#crypto-tracker">3.10. Crypto Tracker</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -189,7 +195,7 @@ This will generate all resources required by the application and tests.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Run the <code>seedu.address.MainApp</code> and try a few commands</p>
+<p>Run the <code>seedu.budgeteer.MainApp</code> and try a few commands</p>
 </li>
 <li>
 <p><a href="#Testing">Run the tests</a> to ensure they all pass.</p>
@@ -769,20 +775,557 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></h3>
+<h3 id="commands-ui-support"><a class="link" href="#commands-ui-support">3.2. Commands UI Support</a></h3>
 <div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
+<p>The Commands UI Support feature displays the existing commands available when an alphabet is typed.</p>
+</div>
+<div class="paragraph">
+<p>CommandBox takes in an incomplete user command, match it with a list of command words currently supported in the application, and returns corresponding command skeleton for the user to fill in.
+We have implemented dropdown menu UI for autocomplete with a list of commands prompts.
+You can click on it and it will have the options automatically keyed into the command box for you. Simply type the respective data and you are ready to go.
+<strong>Current Design:</strong> Include dropdown menu to list all autocomplete options<br>
+<strong>Pros:</strong> Easier access for users at a glance, especially  for first time users.+
+ <strong>Cons:</strong> Inteferes with up and down button for command history.
+<strong>Alternative :</strong> No Dropdown Menu
+<strong>Pros:</strong> No need for additional UI component.
+<strong>Cons:</strong> May not be intuitive to users who have not worked with CLI before.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
+<h3 id="filter-mechanism"><a class="link" href="#filter-mechanism">3.3. Filter Mechanism</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.3.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>This command allows users to filter through the large amount of entries and find the most relevant information they need.
+It allows user to retrieve using other details such as name, date and tag.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Filter.PNG" alt="Filter" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>The user can use this command with only ONE of the following prefixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>n/</code> : To search by name(s)</p>
+</li>
+<li>
+<p><code>c/</code> : To search by cashflow(s)</p>
+</li>
+<li>
+<p><code>d/</code> : To search by date(s)</p>
+</li>
+<li>
+<p><code>t/</code> : To search by tag(s)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>predicate</code> used depends on which type of detail the user is using to find.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The 4 predicates are as follow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>if search by <code>name</code> then <code>NameContainsKeywordsPredicate</code> is used</p>
+</li>
+<li>
+<p>if search by <code>date</code> then <code>DateContainsSpecifiedKeywordsPredicate</code> is used</p>
+</li>
+<li>
+<p>if search by <code>cashflow</code> then <code>CashFlowContainsSpecifiedKeywordsPredicate</code> is used</p>
+</li>
+<li>
+<p>if search by <code>tag</code> then <code>TagContainsSpecifiedKeywordsPredicate</code> is used</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.3.2. Design Considerations</a></h4>
+<div class="paragraph">
+<p>It is implemented to search with one type of detail only such that only the returned results will be
+shown. i.e. if a user search for an entry with date then only the date of the returned entry/s are relevant,
+and other details are irrelevant to the input date during the search.</p>
+</div>
+<div class="paragraph">
+<p>Alternative design considered was to allow user input multiple details during each search. It may help to streamline and shorten the list of entry/s
+that will be returned, but it is not useful as user may only recall some details of an entry only.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example 1</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Entry 1 : Name `Breakfast Joel Choo</code> and date <code>12-01-2019</code></p>
+</li>
+<li>
+<p><code>Entry 2</code> : Name <code>Lunch Matt Dam</code> and date <code>12-01-2019</code></p>
+</li>
+<li>
+<p><code>Entry 3</code> : Name <code>Dinner with Elis Yeo</code> and date <code>12-01-2019</code></p>
+</li>
+<li>
+<p>User wants to find <code>Joel</code> but do not recall surname and key in <code>Joel</code> only</p>
+</li>
+<li>
+<p>User cannot recall the date and key in a random number <code>12-12-2019</code></p>
+</li>
+<li>
+<p>There will be no results returned in this scenario as input date does not match the phone numbers in <code>Entry 1</code>
+and <code>Entry 2</code> that contains <code>Joel</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example two</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Contact 1</code> : Name <code>Lisa Jo</code> and tag <code>friends</code></p>
+</li>
+<li>
+<p>User wants to find <code>Lisa Jo</code> and tag in <code>Lisa Jo</code></p>
+</li>
+<li>
+<p>User cannot recall the date and tag in a random number <code>123356890</code></p>
+</li>
+<li>
+<p>There will be no results returned in this scenario as input date does not match the date in the <code>Entry 1</code> although the name matches exactly.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Hence, the user has to know at least 1 exact detail( out of name, date, tags ) that he can remember in order to have results returned.</p>
+</div>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Easy Search with other details.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 1 (current choice):
+</strong> Able to search with other details but only one type of data required for each search<br>
+<strong>Pros:</strong> Implementation is easier when only one type of detail is used.<br>
+<strong>Cons:</strong> Detail need to be exact.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 2:</strong> Able to find with vast different multiple details.<br>
+<strong>Pros:</strong> More chances of get the required results as there are more options available in case user forgets the details needed.<br>
+<strong>Cons:</strong> Harder to implement and increased complexity may affect efficiency.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="display-entries-mechanism"><a class="link" href="#display-entries-mechanism">3.4. Display Entries Mechanism</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.4.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>The display command function is facilitated by <code>ModelManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>The command is 'display' followed by the parameters such as name, date or cashflow and the order of the sorted data.</p>
+</div>
+<div class="paragraph">
+<p>It represents an in-memory model of the AddressBook and is the component which manages the interactions between
+the commands and the <code>VersionedAddressBook</code>.
+DisplayCommand calls <code>ModelManager#displayFilteredEntryList</code> and passes in the tag to be displayed by and whether the display
+order is to be in reversed.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> This feature has one keyword `display` and takes in arguments of either tag or order of display. Keywords are
+case insensitive.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Category can be either of the following keywords:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code> - To display in lexicographical order by the name attribute of the entry</p>
+</li>
+<li>
+<p><code>date</code> - To display by the date attribute of the entry</p>
+</li>
+<li>
+<p><code>cashflow</code> - To display by the income or expense of the entry</p>
+<div class="literalblock">
+<div class="content">
+<pre>Order can be either of the following:</pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>des</code> - To display in descending order</p>
+</li>
+<li>
+<p><code>asc</code> - To display in ascending order</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This feature has 2 available selections as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Single Input Parameter Mode - Input parameter can be either the tag or the order of display</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If tag specified, entries are displayed in ascending order of that tag</p>
+</li>
+<li>
+<p>If order specified, entries will be displayed by name in the specified order</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Two Input Parameters Mode - Input  parameters must contain only 1 tag and only 1 order,
+and can be input in no particular order</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The input given by the user is passed to <code>DisplayCommandParser</code> to split the input separated by whitespaces to ensure
+there is either only one or two arguments input by the user. These arguments are then stored in an array of strings and
+the size of the array determines the mode of the command.
+The strings are compared to two sets of strings containing the supported categories and orders of the function.
+The string of the tag and a boolean representing whether the entrys are to be reversed will then be passed to
+<code>ModelManager</code> to display the entrys.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the display operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/DisplaySeqDg.PNG" alt="width:800">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-method-of-displaying-sorted-data"><a class="link" href="#aspect-method-of-displaying-sorted-data">Aspect: Method of displaying sorted data</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Choice:</strong> Displays the observable array list in the underlying data structure in <code>EntryList</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, displaying of sorted entries will be permanent, user may not sort again with every following command</p>
+</li>
+<li>
+<p>Cons: User may want to have multiple data entries sorted in order beside only use one parameter.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative :</strong> Sort the FilteredList of entrys obtained after filtering the underlying array list</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Does not allow the user to alter the arrangement of the underlying data, and only obtains a sorted version of
+the read only data.</p>
+</li>
+<li>
+<p>Cons: Unable to sort a FilteredList as it does not support it, implementations could instead use SortedList but it
+will not be able to perform the filtering function</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-encryption"><a class="link" href="#data-encryption">3.5. Data Encryption</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">3.5.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>Currently, persons' data is stored in an XML file in plain text is not secure, hence the need to encrypt XML data.</p>
+</div>
+<div class="paragraph">
+<p>Data is encrypted using a AES-256 bits encryption. File is automatically encrypted when the Budgeter closes and decrypted when the Budgeter is started.</p>
+</div>
+<div class="paragraph">
+<p>The current implementation is just a proof of concept and will be improved upon in upcoming version.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The standard version of the JRE/JDK are under export restrictions. That also includes that some cryptographic algorithms are not allowed to be shipped in the standard version.
+Replace files in library with Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.5.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-implementation-of-encryptedpasskey"><a class="link" href="#aspect-implementation-of-encryptedpasskey">Aspect: Implementation of EncryptedPassKey</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Design:</strong> Using a password based encryption key</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Data Encryption will be easier for developers to implement this way. Encrypted Pass key will not be exposed.</p>
+</li>
+<li>
+<p>Cons: Password for the key is fixed and predetermined.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative :</strong> Use the Java Cryptography Extension KeyStore</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Encryption keys will not be exposed</p>
+</li>
+<li>
+<p>Cons: Harder for developers to code</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-strength-of-the-encryption"><a class="link" href="#aspect-strength-of-the-encryption">Aspect: Strength of the encryption</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (Current):</strong> 128-bits encryption</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Using 128-bits encryption will be much faster and requires less computation resources</p>
+</li>
+<li>
+<p>Cons: Less stronger but still secure encryption</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2 (Prospective):</strong> 256-bits encryption</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: 256-bits provide much stronger encryption</p>
+</li>
+<li>
+<p>Cons: Requires more computation resources and might be a tad slower, albeit negligible</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lock-feature"><a class="link" href="#lock-feature">3.6. Lock feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-5"><a class="link" href="#current-implementation-5">3.6.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>As Budgeter contains sensitive personal financial data, apart from encrypting the XML data files, we have to keep it away from spying and stealing of data.</p>
+</div>
+<div class="paragraph">
+<p>As such, we could implement a password to protect the data. The password will be encrypted and store as a local copy.</p>
+</div>
+<div class="paragraph">
+<p>In addition the XML file will be unlocked when the password is entered to allow power users to edit the XML file.</p>
+</div>
+<div class="paragraph">
+<p>The password feature will be created as a class of it&#8217;s own. There will be no default password for ease of use of the program.</p>
+</div>
+<div class="paragraph">
+<p>Users can decide whether to set a password. The current implementation is just a proof of concept and will be improved upon in upcoming version.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram shows how the password command works. In the following diagram, the <code>password set/123</code> is executed.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the display operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/lock.PNG" alt="lock" width="800">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.6.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-password-length-and-strength"><a class="link" href="#aspect-password-length-and-strength">Aspect: Password length and strength</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Design:</strong> Password will be stored using Strings.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users will be able to key in alphanumeric password and developers can encoded the Strings easily.</p>
+</li>
+<li>
+<p>Cons: Harder to implement than a purely numerical password</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative :</strong> Password will be numerical</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Developer will be able to code it easily</p>
+</li>
+<li>
+<p>Cons: Password will be weaker, able to brute force through</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-storage-of-password-file"><a class="link" href="#aspect-storage-of-password-file">Aspect: Storage of password file</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Design:</strong> Password will be stored in a encrypted file</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: File will be accessible but encrypted, making it safer</p>
+</li>
+<li>
+<p>Cons: Developer will need to encrypt the file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative :</strong> Password will be stored in a plain text file</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to store and retrieve password</p>
+</li>
+<li>
+<p>Cons: Data folder with the password need to be locked with shell file otherwise it is accessible for developers</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="report-feature"><a class="link" href="#report-feature">3.7. Report feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">3.7.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>This feature allows the user to view a report (in the form of a pop-up window)
+of all their financial activity within a period of time.</p>
+</div>
+<div class="paragraph">
+<p>The corresponding command required for this feature is <code>report</code>.</p>
+</div>
+<div class="paragraph">
+<p>The command takes in three optional arguments: <code>s/</code>, <code>e/</code> and <code>insight/</code></p>
+</div>
+<div class="paragraph">
+<p><code>s/</code> (Start Date): Report takes into consideration of all entries that are on or after the given start date</p>
+</div>
+<div class="paragraph">
+<p><code>e/</code> (End Date): Report takes into consideration of all entries that are on or before the given end date</p>
+</div>
+<div class="paragraph">
+<p>Note: If both dates are given, the start date shall be before or on the same date as end date.
+Otherwise the command will fail.</p>
+</div>
+<div class="paragraph">
+<p><code>insight/</code> (Additional Insights): If this parameter is provided, the produced report window will provide the user with
+additional information such as what their spending or income is composed of (which is based on the tags of the entries).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ReportSequenceDiagram.png" alt="ReportSequenceDiagram" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>The start and end dates that are passed into the command are processed by the ReportCommandParser, which also generates
+the predicates used to filter the list of entries based on the dates.</p>
+</div>
+<div class="paragraph">
+<p>To get a predicate that matches the dates between the start and end dates, the .and(predicate) method is used to make
+a new predicate which is an and operation of the two predicates.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>insight/</code> parameter is supplied, it will trigger a flag which is then used to determine if more information
+should be provided to the user or not.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.7.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-password-length-and-strength-2"><a class="link" href="#aspect-password-length-and-strength-2">Aspect: Password length and strength</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Design:</strong> Report will show a piechart</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -813,9 +1356,80 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="crypto-tracker"><a class="link" href="#crypto-tracker">3.10. Crypto Tracker</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-7"><a class="link" href="#current-implementation-7">3.10.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>This feature will be a command facilitated by <code>BitcoinCommand</code>. It returns how much bitcoin you can buy with your current balance with real-time market prices.
+This feature is to be extended towards additional cryptocurrencies, and is planned to have more functionality rather than just simply viewing prices.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>BitcoinCommand#execute()</code> - Display a message regarding the current bitcoin price and how much you will be able to purchase</p>
+</li>
+<li>
+<p><code>BitcoinCommand#switch()</code> - This is a planned method of possibly switching to another cryptocurrency</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given below is an example scenario of how the bitcoin command mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application, and changes are made to the <code>Budgeter</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The user inputs the bitcoin command, and in the <code>BitcoinCommand#execute()</code> method, it pulls the current balance from the <code>Budgeter</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The method calls the CryptoCompare API to return current market prices of bitcoin, and stores that data.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. The resulting information is displayed to the user with a message.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-7"><a class="link" href="#design-considerations-7">3.10.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-to-deal-with-the-api-call"><a class="link" href="#aspect-how-to-deal-with-the-api-call">Aspect: How to deal with the API call</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Save the entire call.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement.</p>
+</li>
+<li>
+<p>Cons: May have performance issues in terms of memory usage.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Only save the information of related crypto assets.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Will use less memory.</p>
+</li>
+<li>
+<p>Cons: If changes are made to the list of interested crypto assets, must make frequent calls.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1107,7 +1721,7 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <p><em>System Tests</em> that test the entire App by simulating user actions on the GUI. These are in the <code>systemtests</code> package.</p>
 </li>
 <li>
-<p><em>Unit tests</em> that test the individual components. These are in <code>seedu.address.ui</code> package.</p>
+<p><em>Unit tests</em> that test the individual components. These are in <code>seedu.budgeteer.ui</code> package.</p>
 </li>
 </ol>
 </div>
@@ -1118,15 +1732,15 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <ol class="loweralpha" type="a">
 <li>
 <p><em>Unit tests</em> targeting the lowest level methods/classes.<br>
-e.g. <code>seedu.address.commons.StringUtilTest</code></p>
+e.g. <code>seedu.budgeteer.commons.StringUtilTest</code></p>
 </li>
 <li>
 <p><em>Integration tests</em> that are checking the integration of multiple code units (those code units are assumed to be working).<br>
-e.g. <code>seedu.address.storage.StorageManagerTest</code></p>
+e.g. <code>seedu.budgeteer.storage.StorageManagerTest</code></p>
 </li>
 <li>
 <p>Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together.<br>
-e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
+e.g. <code>seedu.budgeteer.logic.LogicManagerTest</code></p>
 </li>
 </ol>
 </div>
@@ -1849,7 +2463,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Fix <code>invalidAndValidPersonAddressBook.json</code>, <code>typicalPersonsAddressBook.json</code>, <code>validAddressBook.json</code> etc., such that the JSON tests will not fail due to a missing <code>remark</code> field.</p>
+<p>Fix <code>invalidAndValidPersonAddressBook.json</code>, <code>typicalPersonsEntriesBook.json</code>, <code>validAddressBook.json</code> etc., such that the JSON tests will not fail due to a missing <code>remark</code> field.</p>
 </li>
 </ol>
 </div>
@@ -2005,6 +2619,18 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">protect my data from hackers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have a private and secure usage of app</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">encrypt my data from hackers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my local copy is less hackable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add income details</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -2035,6 +2661,18 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter data acordingly by name or cashflow or date or tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dont waste time finding one by one</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">display sorted data by descending or ascending order by name or cashflow or date or tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">get the most relevant data that matter to me most and understand the data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modify expense details</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">make changes to existing entries</p></td>
 </tr>
@@ -2054,13 +2692,13 @@ for <code>RemarkCommandParser</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">list income details based on tag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see my income belonging in a particular category</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see my income belonging in a particular tag</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">list expenses details based on tag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see my expenses belonging in a particular category</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see my expenses belonging in a particular tag</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -2078,13 +2716,7 @@ for <code>RemarkCommandParser</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">generate a financial report</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To view a consolidated report for the time period about income and expenditure</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">export financial report as an Microsoft Excel Spreadsheet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To generate an excel file of the report generated for further data visualisation / augmentation on the Microsoft Excel platform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To understand my income and expenditure patterns and make necessary changes</p></td>
 </tr>
 </tbody>
 </table>
@@ -2154,7 +2786,7 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </li>
 <li>
-<p>1c. The record to be added is a duplicate of an existing record</p>
+<p>1c. The entry to be added is a duplicate of an existing entry</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -2365,4 +2997,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-19 03:06:07 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 05:42:59 UTC</div></div></div></body></html>

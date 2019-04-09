@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Financial Saviour - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Budgeter - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Financial Saviour - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Budgeter - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>T11-03</code>      Since: <code>Jan 2019</code>      Licence: <code>MIT</code></p>
@@ -14,19 +14,24 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-an-entry-code-add-code">3.2. Adding an entry: <code>add</code></a></li>
+<li><a href="#listing-all-entries-code-list-code">3.3. Listing all entries : <code>list</code></a></li>
+<li><a href="#editing-an-entry-code-edit-code">3.4. Editing an entry : <code>edit</code></a></li>
+<li><a href="#locating-entries-by-name-code-find-code">3.5. Locating entries by name: <code>find</code></a></li>
+<li><a href="#deleting-an-entry-code-delete-code">3.6. Deleting an entry : <code>delete</code></a></li>
+<li><a href="#selecting-an-entry-code-select-code">3.7. Selecting an entry : <code>select</code></a></li>
+<li><a href="#filtering-entrys-by-names-or-cashflows-or-dates-or-tags-code-filter-code">3.8. Filtering entrys by names or cashflows or dates or tags: <code>filter</code></a></li>
+<li><a href="#displaying-sorted-entries-code-display-code">3.9. Displaying sorted entries : <code>display</code></a></li>
+<li><a href="#generates-report-code-report-code">3.10. Generates Report : <code>report</code></a></li>
+<li><a href="#report-insight-code-report-insight-code">3.11. Report Insight : <code>report insight/</code></a></li>
+<li><a href="#returns-purchasing-power-regarding-bitcoin-code-bitcoin-code">3.12. Returns purchasing power regarding bitcoin: <code>bitcoin</code></a></li>
+<li><a href="#lock-code-lock-code">3.13. Lock : <code>lock</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.14. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.15. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.16. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.17. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.18. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.19. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -38,7 +43,7 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Financial Saviour (FS) is for those who prefer to use a <strong>desktop app to manage their finances.
+<p>Budgeter is for those who prefer to use a <strong>desktop app to manage their finances.
 It is *optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still
 having the benefits of a Graphical User Interface (GUI).
 Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
@@ -63,7 +68,7 @@ Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#82
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
+<img src="images/ui2.png" alt="ui2" width="790">
 </div>
 </div>
 </li>
@@ -76,10 +81,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>list</code></strong> : lists all entries</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>add</code></strong><code>n/John Doe&#8217;s meal d/20-02-2019 c/+100 t/John street</code> : adds a entry named <code>John Doe</code> to the Address Book.</p>
 </li>
 <li>
 <p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
@@ -117,7 +122,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
 </li>
 <li>
-<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
+<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/DATE</code>, <code>p/DATE n/NAME</code> is also acceptable.</p>
 </li>
 </ul>
 </div>
@@ -130,10 +135,35 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="adding-an-entry-code-add-code"><a class="link" href="#adding-an-entry-code-add-code">3.2. Adding an entry: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
+<p>Adds an entry to the address book<br>
+Format: <code>add n/NAME d/DATE c/CASHFLOW [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>CASHFLOW represents the input/output of the financial activity. It can be either a output(expense) or a input(income).
+To distinguish between an income and an expense, the user will need to enter a plus "+" or minus "-" sign before the money amount respectively.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Typical format for a CASHFLOW:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Typical example of <strong>income</strong>: add n/Salary d/20-2-2019 m/<strong>+50.00</strong></p>
+</li>
+<li>
+<p>Typical example of <strong>expense</strong>: add n/BusFare d/20-2-2019 m/<strong>-4.50</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -142,7 +172,7 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;<
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-A person can have any number of tags (including 0)
+An entry can have any number of tags (including 0)
 </td>
 </tr>
 </table>
@@ -153,33 +183,35 @@ A person can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+<p><code>add n/DinnerWithKenneth d/20-02-2019 c/-5</code></p>
 </li>
 <li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>add n/IncomeFromWork c/+100 d/01-01-2019 t/Work</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="listing-all-entries-code-list-code"><a class="link" href="#listing-all-entries-code-list-code">3.3. Listing all entries : <code>list</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
+<p>Shows a list of all entries in the address book.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="editing-an-entry-code-edit-code"><a class="link" href="#editing-an-entry-code-edit-code">3.4. Editing an entry : <code>edit</code></a></h3>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
+<p>Edits an existing entry in the address book.<br>
+Format: <code>edit INDEX [n/NAME] [d/DATE] [c/CASHFLOW] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Edits the entry at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed entry list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>At least one of the optional fields must be provided.</p>
@@ -188,10 +220,10 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 <p>Existing values will be updated to the input values.</p>
 </li>
 <li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
+<p>When editing tags, the existing tags of the entry will be removed i.e adding of tags is not cumulative.</p>
 </li>
 <li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+<p>You can remove all the entry&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
 </li>
 </ul>
 </div>
@@ -203,20 +235,20 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
+<p><code>edit 1 d/12-12-2019 c/+100.0<br>
+Edits the date and cashflow of the 1st entry to be `12-12-2019</code> and <code>johndoe@example.com</code> respectively.</p>
 </li>
 <li>
 <p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
+Edits the name of the 2nd entry to be <code>Betsy Crower</code> and clears all existing tags.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-entries-by-name-code-find-code"><a class="link" href="#locating-entries-by-name-code-find-code">3.5. Locating entries by name: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
+<p>Finds entries whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
@@ -236,7 +268,7 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Entries matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
 </li>
 </ul>
 </div>
@@ -253,15 +285,15 @@ Returns <code>john</code> and <code>John Doe</code></p>
 </li>
 <li>
 <p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+Returns any entry having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-an-entry-code-delete-code"><a class="link" href="#deleting-an-entry-code-delete-code">3.6. Deleting an entry : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Deletes the specified entry from the address book.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -269,10 +301,10 @@ Format: <code>delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
+<p>Deletes the entry at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed entry list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
@@ -289,20 +321,20 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd entry in the address book.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
 <code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+Deletes the 1st entry in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-an-entry-code-select-code"><a class="link" href="#selecting-an-entry-code-select-code">3.7. Selecting an entry : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
+<p>Selects the entry identified by the index number used in the displayed entry list.<br>
 Format: <code>select INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -310,10 +342,10 @@ Format: <code>select INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+<p>Selects the entry and loads the Google search page the entry at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>The index refers to the index number shown in the displayed entry list.</p>
 </li>
 <li>
 <p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
@@ -330,18 +362,390 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
+Selects the 2nd entry in the address book.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
 <code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
+Selects the 1st entry in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<h3 id="filtering-entrys-by-names-or-cashflows-or-dates-or-tags-code-filter-code"><a class="link" href="#filtering-entrys-by-names-or-cashflows-or-dates-or-tags-code-filter-code">3.8. Filtering entrys by names or cashflows or dates or tags: <code>filter</code></a></h3>
+<div class="paragraph">
+<p>Finds entrys who contain any of the given keywords.<br>
+Format: <code>filter n/[MORE_KEYWORDS] or d/[MORE_KEYWORDS] or c/[MORE_KEYWORDS] or t/[MORE_KEYWORDS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Filtering using one type of details each time.<br>
+E.g. If <code>filter d/12-01-2019</code> then <code>n/</code> and <code>t/</code> should not be included since
+there is only one data information is used to filter accordingly
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search for name is case insensitive. e.g <code>Income from John</code> will match <code>income from John</code></p>
+</li>
+<li>
+<p>The search for cashflow is -/+ sensitive. e.g <code>-100</code> will not match <code>+100</code></p>
+</li>
+<li>
+<p>The search for tag is case sensitive. e.g <code>waste</code> will match <code>waste</code> but not <code>Waste</code></p>
+</li>
+<li>
+<p>The order of the keywords for name does not matter. e.g. <code>Alex Jo</code> will match <code>Jo Alex</code></p>
+</li>
+<li>
+<p>The order of the keywords when searching a few tags does not matter. e.g. <code>[friends] [colleagues]</code> will match <code>[colleagues] [friends]</code></p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>friend</code> will not match <code>friends</code></p>
+</li>
+<li>
+<p>Name matching at least one keyword will be returned e.g. <code>Ming Jun</code> will return <code>Ming Ho</code>, <code>Jun Xang</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>filter n/Food with Alex</code><br>
+Returns <code>food with alex</code> and `Food with Alex John `</p>
+</li>
+<li>
+<p><code>filter n/Income from AIA</code><br>
+Returns any entry having names <code>AIA</code> or <code>Income</code></p>
+</li>
+<li>
+<p><code>filter d/12-01-2019</code><br>
+Returns any entry having date <code>12-01-2019</code> exactly</p>
+</li>
+<li>
+<p><code>filter d/12-01-2019 12-02-2019</code><br>
+Returns any entry having dates <code>12-01-2019</code> or <code>12-02-2019</code> exactly</p>
+</li>
+<li>
+<p><code>filter c/+100</code><br>
+Returns any entry having cashflow <code>+100</code> exactly</p>
+</li>
+<li>
+<p><code>filter t/[friends]</code><br>
+Returns any entry having tag <code>[friends]</code> exactly</p>
+</li>
+<li>
+<p><code>filter t/[family] [colleagues]</code><br>
+Returns any entry having tags <code>[family]</code> or <code>[colleagues]</code> exactly</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="displaying-sorted-entries-code-display-code"><a class="link" href="#displaying-sorted-entries-code-display-code">3.9. Displaying sorted entries : <code>display</code></a></h3>
+<div class="paragraph">
+<p>Sorts the list of entries in the entry book by a category.
+There are 3 categories to sort by <code>name</code>, <code>date</code>, <code>cashflow</code> and
+entrys can be sorted in either ascending order <code>asc</code> or descending order <code>des</code>.<br>
+Format: <code>sort [TAG] [ORDER]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Only the abovementioned keywords for category and order are supported.</p>
+</li>
+<li>
+<p>Keyword matching is case insensitive, e.g <code>sort Name Des</code> will work the same as <code>sort name desc</code>.</p>
+</li>
+<li>
+<p>Either one or both of the optionals fields are to be provided.</p>
+</li>
+<li>
+<p>Order of the input fields is not significant, e.g. <code>sort name asc</code> will work the same as <code>sort
+asc name</code>.</p>
+</li>
+<li>
+<p>If order is not specified, default sort order is ascending.</p>
+</li>
+<li>
+<p>If category is not specified, default sort category is by name.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>display date</code> - Sorts entries by date in ascending order.</p>
+</li>
+<li>
+<p><code>display desc</code> - Sorts entries by name in descending order.</p>
+</li>
+<li>
+<p><code>display cashflow des</code> - Sorts entries by cashflow in descending order.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generates-report-code-report-code"><a class="link" href="#generates-report-code-report-code">3.10. Generates Report : <code>report</code></a></h3>
+<div class="paragraph">
+<p>Shows a visual pie chart listing specified by the user when user type the command report.<br>
+A <code>report</code> is an item that contains information on the <strong>date or month that is represented</strong>, the <strong>total expense calculated</strong>, the <strong>total income calculated</strong> and
+the <strong>net cash flow calculated.</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Note that there are specific formats required for the dates and months entered.
+Capital letters of  REPORT is not allowed, instead report is used.</p>
+</li>
+<li>
+<p>For the commands <strong>"report"</strong> and <strong>"summary category"</strong>, START_DATE/END_DATE must be in the format of
+<code>dd-mm-yyyy</code> where <code>dd</code> represents day, <code>mm</code> represents month, <code>yyyy</code> represents year.</p>
+</li>
+<li>
+<p>For command <strong>"report"</strong>, START_MONTH/END_MONTH must in the format of <code>mmm-yyyy</code>, <code>mmm</code> represents the month with its three letter representations, and
+<code>yyyy</code> represents the year in its numerical form.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The screenshots below are examples of what you can see once the command has been accepted. The commands entered have been left
+in for visualisation purposes. These screenshots are taken in <strong>fullscreen mode</strong>  at 1080p resolution.</p>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app when <code>report</code> is run</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ReportD.PNG" alt="ReportD" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app when <code>report s/12-12-2018 e/today</code> is run</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Report2.PNG" alt="Report2" width="790">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="report-insight-code-report-insight-code"><a class="link" href="#report-insight-code-report-insight-code">3.11. Report Insight : <code>report insight/</code></a></h3>
+<div class="paragraph">
+<p>Further to report feature, users want to know more and understand their spending pattern so as to
+improve on what they can consume or earn.
+Hence, we developed this to aid in this problem.</p>
+</div>
+<div class="paragraph">
+<p>Similar to report, this will show a breakdown of total expenses and income into categories and displays these information in a pie chart.<br>
+There is 2 format for this command:</p>
+</div>
+<div class="paragraph">
+<p>First, Format: <code>report insight/</code> where it will show the piechart in terms of the current entries available in the Budgeter.
+Second, Format:`report insight/ d/START_DATE END_DATE`where it will show the piechart in terms of the start and end dates input into the the Budgeter.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>START_DATE/END_DATE follow the same configurations as date parameters required when adding records. It is in the form of
+<strong>dd-mm-yyyy</strong> where <strong>dd</strong> represents day, <strong>mm</strong> represents month and <strong>yyyy</strong> represents the year. <strong>dd</strong> and <strong>mm</strong> both require 1 to 2 digits while
+<strong>yyyy</strong> requires exactly 4 digits.</p>
+</li>
+<li>
+<p>START_DATE and END_DATE can be 'today'.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Once the command has been executed, a window will appear showing a pie chart containing data that is relevant in the range.<br>
+At the same time, currently selected entries will be unselected to reduce confusion for the user. If there are many categories shown and
+the box is not large enough, you can use the scroll bar at the side of each legend to view the other categories which are not in view.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to label constraints, some labels may not be displaying correctly if they are overlapping with other labels. This happens when the pie slice
+is too small. To improve readability, we have decided to hide some labels in such scenarios. Also, when the label is too long, since the pie charts
+need to fit the labels, the pie chart may become small as a result. To prevent such situations, please keep your labels short. This will be improved in
+later versions of the product to remove the labels completely and use a mouse over input instead.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>report insight</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Below are some screenshots of what you can see when the command has been accepted. The commands entered have been left
+in for visualisation purposes. These screenshots are taken in <strong>fullscreen mode</strong> at 1080p resolution.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RI1.PNG" alt="RI1" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app displaying income breakdown when <code>report insight</code> is run</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RI2.PNG" alt="RI2" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app displaying expense breakdown when <code>report insight</code> is run</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>report insight d/11-11-2018 12-12-2019</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Below are some screenshots of what you can see when the command has been accepted. The commands entered have been left
+in for visualisation purposes. These screenshots are taken in <strong>fullscreen mode</strong> at 1080p resolution.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RI3.PNG" alt="RI3" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app displaying income breakdown when <code>report insight d/11-11-2018 12-12-2019</code> is run</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RI4.PNG" alt="RI4" width="790">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Screenshot of app displaying expense breakdown when <code>report insight d/11-11-2018 12-12-2019</code> is run</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="returns-purchasing-power-regarding-bitcoin-code-bitcoin-code"><a class="link" href="#returns-purchasing-power-regarding-bitcoin-code-bitcoin-code">3.12. Returns purchasing power regarding bitcoin: <code>bitcoin</code></a></h3>
+<div class="paragraph">
+<p>Returns how much bitcoin you can buy with your current balance with real-time market prices.<br>
+Format: <code>bitcoin</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You must have a balance, or else the amount will just return 0.<br>
+E.g. If no inputs have been made, the method will just return 0.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:
+Coming soon</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lock-code-lock-code"><a class="link" href="#lock-code-lock-code">3.13. Lock : <code>lock</code></a></h3>
+<div class="paragraph">
+<p>Set a password for Budgeter to protect data entry, privacy and unwanted tampering.
+No password required to access the program when using for the first time.<br>
+Format: <code>lock</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>lock set/yourpassword</code><br>
+Password will be set as yourpassword.</p>
+</li>
+<li>
+<p><code>lock change/yournewpassword</code><br>
+Password will be changed to yournewpassword.</p>
+</li>
+<li>
+<p><code>lock remove/yourexistingpassword</code><br>
+Password will be removed.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Currently, there are no password recovery mechanism in place.</p>
+</li>
+<li>
+<p>If users forget their password, please delete the password.txt file in the data folder to remove the password.</p>
+</li>
+<li>
+<p>The password.txt is encrypted, hence, no one can see the exact password.</p>
+</li>
+<li>
+<p>Default destination file is at the data folder.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.14. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -362,7 +766,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.15. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -407,7 +811,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.16. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -439,30 +843,24 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.17. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.18. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.19. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
 </div>
@@ -482,8 +880,8 @@ There is no need to save manually.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><strong>Add</strong> <code>add n/NAME d/DATE c/CASHFLOW [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>add n/Lunch with James Ho d/12-02-2019 c/+100.00 t/friend t/colleague</code></p>
 </li>
 <li>
 <p><strong>Clear</strong> : <code>clear</code></p>
@@ -493,8 +891,8 @@ e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1
 e.g. <code>delete 3</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [d/DATE] [c/CASHFLOW] [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>edit 2 n/James Lee c/+12</code></p>
 </li>
 <li>
 <p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
@@ -519,7 +917,22 @@ e.g.<code>select 2</code></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
+<li>
+<p><strong>Report</strong> : <code>report</code></p>
+</li>
+<li>
+<p><strong>Report insight</strong> : <code>Report insight</code></p>
+</li>
+<li>
+<p><strong>Filter</strong> : <code>filter</code></p>
+</li>
+<li>
+<p><strong>Display</strong> : <code>display</code></p>
+</li>
+<li>
+<p><strong>Lock</strong> : <code>lock</code></p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-02-19 03:06:07 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 05:42:59 UTC</div></div></div></body></html>
