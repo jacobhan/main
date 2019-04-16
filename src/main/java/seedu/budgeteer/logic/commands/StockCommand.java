@@ -48,7 +48,6 @@ public class StockCommand extends Command {
         String ret = "";
         try {
             String temp = firstUrl + name.fullName.toUpperCase() + secondUrl;
-            System.out.println(temp);
 
             URL url = new URL(temp);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -56,13 +55,12 @@ public class StockCommand extends Command {
             conn.setRequestProperty("Accept", "application/json");
 
             if (conn.getResponseCode() != 200) {
-                throw new RuntimeException("Failed : HTTP error code : "
-                        + conn.getResponseCode());
+                ret = null;
+            } else {
+                BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+
+                ret = br.readLine();
             }
-
-            BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-
-            ret = br.readLine();
 
             conn.disconnect();
 

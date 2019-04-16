@@ -16,7 +16,7 @@ import seedu.budgeteer.logic.commands.DisplayCommand;
 import seedu.budgeteer.logic.commands.EditCommand;
 import seedu.budgeteer.logic.commands.EthereumCommand;
 import seedu.budgeteer.logic.commands.ExitCommand;
-//import seedu.budgeteer.logic.commands.ExportExcelCommand;
+import seedu.budgeteer.logic.commands.ExportExcelCommand;
 import seedu.budgeteer.logic.commands.FilterCommand;
 import seedu.budgeteer.logic.commands.FindCommand;
 import seedu.budgeteer.logic.commands.HelpCommand;
@@ -126,8 +126,8 @@ public class EntriesBookParser {
         case LockCommand.COMMAND_WORD:
             return new LockCommandParser().parse(arguments);
 
-//        case ExportExcelCommand.COMMAND_WORD:
-//            return new ExportExcelCommand();
+        case ExportExcelCommand.COMMAND_WORD:
+            return new ExportExcelCommand();
 
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
