@@ -32,8 +32,8 @@ public class StockCommand extends Command {
             + "Example: " + COMMAND_WORD + " "
             + PREFIX_NAME + "MSFT";
 
-    private String firstUrl = "https://api.iextrading.com/1.0/stock/";
-    private String secondUrl = "/price";
+    private String firstUrl = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=";
+    private String secondUrl = "&apikey=Y6G36I3BIPQL5I2";
 
     private final Name name;
 
@@ -55,11 +55,18 @@ public class StockCommand extends Command {
             conn.setRequestProperty("Accept", "application/json");
 
             if (conn.getResponseCode() != 200) {
-                ret = null;
-            } else {
-                BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+                throw new RuntimeException("Failed : HTTP error code : "
+                        + conn.getResponseCode());
+            }
 
-                ret = br.readLine();
+            BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+
+            String output;
+            int lineNumber = 7;
+            while (lineNumber > 0) {
+                output = br.readLine();
+                ret = output;
+                lineNumber -= 1;
             }
 
             conn.disconnect();
@@ -86,8 +93,10 @@ public class StockCommand extends Command {
 
         if (full == null) {
             messageReturn = "Sorry, your input is not a valid stock. Please try again.";
+        } else if (full.length() < 30) {
+            messageReturn = "Sorry, your input is not a valid stock. Please try again.";
         } else {
-            price = Float.parseFloat(full);
+            price = Float.parseFloat(full.substring(22, 28));
             Double printPrice = (double) Math.round(price * 100.0) / 100.0;
 
             String first = "You are able to buy ";
